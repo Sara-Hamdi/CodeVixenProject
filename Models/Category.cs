@@ -11,7 +11,7 @@ namespace mvcProject.Models
         public int NumOfBooks { get; set; }
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
         [Required]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
     }
 }

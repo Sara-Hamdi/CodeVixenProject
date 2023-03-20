@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using mvcProject.Data;
 using mvcProject.Models;
 
@@ -27,10 +28,7 @@ namespace mvcProject.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Category categoryObj)
         {
-            if(categoryObj.Name==categoryObj.NumOfBooks.ToString())
-            {
-                ModelState.AddModelError("Name", "the category name cannot match exactly the display order");
-            }
+       
             if (ModelState.IsValid)
             {
                 _db.Categories.Add(categoryObj);
@@ -43,10 +41,57 @@ namespace mvcProject.Controllers
             }
         }
         //GET
+        public IActionResult Edit(int id)
+        {
+            if(id==null || id==0)
+            {
+                return NotFound();
+            }
+            var categroyFromDb = _db.Categories.Find(id);
+            if (categroyFromDb == null) return NotFound();
+            return View();
+        }
+        //POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Edit(Category categoryObj)
+        {
+            if(ModelState.IsValid)
+            {
+                _db.Categories.Update(categoryObj);
+                _db.SaveChanges(true);
+                return RedirectToAction("Index");
+
+            }
+            else
+            {
+                return View(categoryObj);
+
+            }
+            
+        }
+      //Get
+      public IActionResult Delete(int id)
         {
             return View();
         }
-      
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePost(int id)
+        {
+            var categoryFromDb = _db.Categories.Find(id);
+            if (categoryFromDb == null)
+            {
+
+                return NotFound();
+            }
+            else
+            {
+                _db.Categories.Remove(categoryFromDb);
+                _db.SaveChanges(true);
+                return RedirectToAction("Index");
+            }
+            return View(id);
+        }
     }
 }

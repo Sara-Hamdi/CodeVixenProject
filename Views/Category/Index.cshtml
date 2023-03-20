@@ -13,32 +13,28 @@
 
     </div>
 
+    </div> 
+            <div class="container">
+                <div class="container row g-2">
+            @foreach (var obj in Model)
+            {
+                    <div class="col-6">
+                        <div class="p-3 card text-center">
+                            <h1>@obj.Name</h1>
+                            <h2>@obj.NumOfBooks</h2>
+                            <div>
+                        <a asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-primary"><i class="bi bi-pencil-square"></i>Edit</a>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Category Name</th>
+                        <a asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-secondary"><i class="bi bi-trash"></i>Delete</a>
+                       </div>
+                
+            </div>
+            </div>
+       
+              
+               
+           } 
+           
         
-
-        <th>
-           Number Of Books
-        </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var obj in Model)
-        {
-            <tr>
-                <td style="50%">
-                    @obj.Name
-                </td>
-                <td style="50%">
-                    @obj.NumOfBooks
-                </td>
-            </tr>
-        }
-    </tbody>
-
-
-</table>
-</div>
+        </div>
+    </div>

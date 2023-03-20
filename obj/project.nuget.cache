@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s/3Yga853m1WvktLoZmksKD1UlftCLT0di2D7Qc8Z7iQ1efrqoEfOPM+XY4kmtT5EU4rdz/w6/HY3/2F59gq2Q==",
+  "dgSpecHash": "sCTRATX+JJumy/l/BMc8ZznXe6daW7DqBF4p6h+u4EwNyyCVt4OyV+xALchMRL9d5D2s5K7pIhFJoe9em4ohmg==",
   "success": true,
   "projectFilePath": "F:\\Backend\\mvcProject\\mvcProject.csproj",
   "expectedPackageFiles": [
@@ -202,7 +202,11 @@
     "C:\\Users\\DELL\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\DELL\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.15\\microsoft.netcore.app.host.win-x64.6.0.15.nupkg.sha512"
   ],
   "logs": [
     {

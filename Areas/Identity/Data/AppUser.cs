@@ -11,7 +11,7 @@ namespace mvcProject.Areas.Identity.Data;
 public class AppUser : IdentityUser
 {
     [PersonalData]
-    [Column(TypeName ="nvarchar(100)")]
+    [Column(TypeName = "nvarchar(100)")]
     public string FirstName { get; set; }
     [PersonalData]
     [Column(TypeName = "nvarchar(100)")]
